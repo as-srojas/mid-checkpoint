@@ -6,8 +6,20 @@ describe('Clicks Scenarios', () => {
         cy.visit('https://demoqa.com/buttons');
     })
   
-    it('First Scenario', () => {
+    it('Verify all clicks simultaneously', () => {
+        clickPage.checkAllClicks();
+    })
 
+    it('Verify Single Click', () => {
+        clickPage.verifySingleClick();
+    })
+
+    it('Verify Double Click', () => {
+        clickPage.verifyDoubleClick();
+    })
+
+    it('Verify Right Click', () => {
+        clickPage.verifyRightClick();
     })
   
 })
