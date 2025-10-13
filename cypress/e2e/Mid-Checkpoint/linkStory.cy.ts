@@ -6,9 +6,23 @@ describe('Links Scenarios', () => {
         cy.visit('https://demoqa.com/links');
     })
   
-    it('First Scenario', () => {
-
+    it('Verify Go Home Link', () => {
+        linkPage.clickAndVerifyNewTabHome();
     })
+
+    it('Verify Dynamic Link', () => {
+        linkPage.clickAndVerifyNewTabDynamic();
+    })
+
+    it('Verify API Calls', () => {
+        linkPage.verifyCreatedApiCall();
+        linkPage.verifyNoContentApiCall();
+        linkPage.verifyMovedApiCall();
+        linkPage.verifyBadRequestApiCall();
+        linkPage.verifyUnauthoriuzedApiCall();
+        linkPage.verifyForbiddenApiCall();
+        linkPage.verifyNotFoundApiCall();
+    });
   
 })
   
