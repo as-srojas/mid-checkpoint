@@ -3,7 +3,7 @@ import radioButtonPage from '../../page-objects/MidCheckPointPages/radioButtonPa
 
 describe('Radio Button Scenarios', () => {
     beforeEach(() => {
-        cy.visit('https://demoqa.com/radio-button');
+        cy.visit('radio-button');
     })
   
     it('Verify All Radiobuttons', () => {

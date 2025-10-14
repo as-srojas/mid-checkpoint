@@ -3,7 +3,7 @@ import clickPage from '../../page-objects/MidCheckPointPages/clickPage';
 
 describe('Clicks Scenarios', () => {
     beforeEach(() => {
-        cy.visit('https://demoqa.com/buttons');
+        cy.visit('buttons');
     })
   
     it('Verify all clicks simultaneously', () => {

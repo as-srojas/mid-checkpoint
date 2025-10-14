@@ -7,7 +7,7 @@ describe('Type Scenarios', () => {
     })
   
     it('First Scenario', () => {
-
+        
     })
   
 })

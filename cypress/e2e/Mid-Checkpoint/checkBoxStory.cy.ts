@@ -3,7 +3,7 @@ import checkBoxPage from '../../page-objects/MidCheckPointPages/checkBoxPage';
 
 describe('CheckBox Scenarios', () => {
     beforeEach(() => {
-        cy.visit('https://demoqa.com/checkbox');
+        cy.visit('checkbox');
     })
   
     it('Check And Uncheck All Boxes', () => {
