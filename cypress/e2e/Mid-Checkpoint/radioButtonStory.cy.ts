@@ -6,8 +6,10 @@ describe('Radio Button Scenarios', () => {
         cy.visit('https://demoqa.com/radio-button');
     })
   
-    it('First Scenario', () => {
-
+    it('Verify All Radiobuttons', () => {
+        radioButtonPage.verifyDisabledRadioButton();
+        radioButtonPage.verifyYesRadioButton();
+        radioButtonPage.verifyImpressiveRadioButton();
     })
   
 })
