@@ -1,4 +1,24 @@
 {
   "baseUrl" : "www.testools.com",
-  "email" : "sergio@example.com"
+  "email" : "sergio@example.com",
+  "textBoxData": [
+    {
+      "fullname": "Manuel Garcia",
+      "email": "magarcia@gmail.com",
+      "currentAddress": "Mexicali",
+      "permanentAddress": "Cdmx"
+    },
+    {
+      "fullname": "Andrea Mtz",
+      "email": "Amtz@gmail.com",
+      "currentAddress": "Leon Gto",
+      "permanentAddress": "Guadalajara Jalisco"
+    },
+    {
+      "fullname": "Jose Salazar",
+      "email": "Jsalazar@gmail.com",
+      "currentAddress": "Yucatan",
+      "permanentAddress": "Ciudad De Mexico"
+    }
+  ]
 }
