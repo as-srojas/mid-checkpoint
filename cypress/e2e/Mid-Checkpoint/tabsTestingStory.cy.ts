@@ -6,12 +6,16 @@ describe('Tabs And Open Scenarios', () => {
         cy.visit('selectable');
     })
   
-    it.only('Verify Grid List', () => {
+    it('Verify Grid List', () => {
         tabTestPage.verifyItemsOnGridlList();
     })
 
     it('Verify Vertical List', () => {
         tabTestPage.verifyItemsOnVerticalList();
+    })
+
+    it('Verify One Active', () => {
+        tabTestPage.verifyOneActiveOnVerticalList("Cras justo odio");
     })
 })
   

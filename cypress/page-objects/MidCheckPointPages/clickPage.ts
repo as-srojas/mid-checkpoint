@@ -18,28 +18,31 @@ class ClickPage {
     verifySingleClick() {
         cy.xpath(this.singleClickButton).click();
 
-        cy.xpath(this.singleClickConfirmMessage).should(($el) => {
-            expect($el).to.be.visible;
-            expect($el).to.contain("You have done a dynamic click");
-        });
+        cy.xpath(this.singleClickConfirmMessage).should('be.visible').and('have.text', 'You have done a dynamic click');
+        
     }
 
     verifyDoubleClick() {
         cy.xpath(this.doubleClickButton).dblclick();
 
-        cy.xpath(this.doubleClickConfirmMessage).should(($el) => {
-            expect($el).to.be.visible;
-            expect($el).to.contain("You have done a double click");
-        });
+        cy.xpath(this.doubleClickConfirmMessage).should('be.visible').and('have.text', 'You have done a double click');
     }
 
     verifyRightClick() {
         cy.xpath(this.rightClickButton).rightclick();
 
-        cy.xpath(this.rightClickConfirmMessage).should(($el) => {
-            expect($el).to.be.visible;
-            expect($el).to.contain("You have done a right click");
-        });
+        cy.xpath(this.rightClickConfirmMessage).should('be.visible').and('have.text', 'You have done a right click');
+    }
+
+    verifyWrongClicks() {
+        cy.xpath(this.doubleClickButton).rightclick();
+        cy.xpath(this.rightClickButton).click();
+        cy.xpath(this.rightClickButton).dblclick();
+
+        cy.xpath(this.rightClickConfirmMessage).should('not.exist');
+        cy.xpath(this.doubleClickConfirmMessage).should('not.exist');
+        cy.xpath(this.singleClickConfirmMessage).should('not.exist');
+        
     }
 
 }

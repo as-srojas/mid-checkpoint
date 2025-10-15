@@ -19,7 +19,8 @@ class LinkPage {
             .invoke('attr', 'href')
             .then((href) => {
                 let ref = href;
-                cy.xpath(this.goHomeLink).should('have.attr', 'target', '_blank').click();
+                cy.xpath(this.goHomeLink).should('have.attr', 'target', '_blank').click()
+                .invoke('text').then((text) => {expect(text).to.be.eq("Home")});
                 cy.url().should('include', ref);
             })
     }
@@ -29,7 +30,8 @@ class LinkPage {
             .invoke('attr', 'href')
             .then((href) => {
                 let ref = href;
-                cy.xpath(this.dynamicLink).should('have.attr', 'target', '_blank').click();
+                cy.xpath(this.dynamicLink).should('have.attr', 'target', '_blank').click()
+                .invoke('text').then((text) => {expect(text).to.contains("Home")});;
                 cy.url().should('include', ref);
             })
     }

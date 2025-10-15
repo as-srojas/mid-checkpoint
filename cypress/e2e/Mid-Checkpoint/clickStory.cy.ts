@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import { cli } from 'cypress';
 import clickPage from '../../page-objects/MidCheckPointPages/clickPage';
 
 describe('Clicks Scenarios', () => {
@@ -21,6 +22,10 @@ describe('Clicks Scenarios', () => {
     it('Verify Right Click', () => {
         clickPage.verifyRightClick();
     })
+
+    it.only('Verify Wrong Clicks', () => {
+        clickPage.verifyWrongClicks();
+    }) 
   
 })
   

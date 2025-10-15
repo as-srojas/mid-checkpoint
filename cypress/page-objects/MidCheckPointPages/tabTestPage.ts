@@ -27,6 +27,22 @@ class TabTestPage {
         cy.wrap($el).click({force:true}).should('not.have.class', 'active') });
     }
 
+    verifyOneActiveOnVerticalList(itemText: string) {
+        cy.xpath(this.listTab).click({force:true});
+        
+        cy.xpath(this.verticalList+'//li').each(($el) => {
+            if($el.text().trim() != itemText) return;
+ 
+            cy.wrap($el).click().should('have.class', 'active')
+        });
+
+        cy.xpath(this.verticalList+'//li').each(($el) => {
+            if($el.text().trim() == itemText) return;
+
+            cy.wrap($el).should('not.have.class', 'active') 
+        });
+    }
+
 }
 
 export default new TabTestPage();
