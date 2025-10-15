@@ -3,12 +3,15 @@ import tabTestPage from '../../page-objects/MidCheckPointPages/tabTestPage';
 
 describe('Tabs And Open Scenarios', () => {
     beforeEach(() => {
-        cy.visit('https://demoqa.com/selectable');
+        cy.visit('selectable');
     })
   
-    it('First Scenario', () => {
+    it.only('Verify Grid List', () => {
+        tabTestPage.verifyItemsOnGridlList();
+    })
 
+    it('Verify Vertical List', () => {
+        tabTestPage.verifyItemsOnVerticalList();
     })
-  
 })
   
